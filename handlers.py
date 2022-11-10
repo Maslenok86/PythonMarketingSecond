@@ -157,5 +157,5 @@ async def question(message: Message, state: FSMContext):
     decor = data.get('decor')
     # db_table_val(user_id=message.from_user.id, sex='true', age=0, website='true', sending=1, envelope='true', decor=1, abroad='false')
 
-    await message.answer(f'В результате проведения опроса из 4 человек было выяснено, что целевая аудитория это: {sex}, {age}, которые {website}, отправляют открытки {sending} {envelope}, оформляют {decor} и {abroad}')
+    await message.answer(f'В результате проведения опроса из 4 человек было выяснено, что целевая аудитория это: {sex}, {age}, которые {website}, отправляют открытки {sending} {envelope}, {decor} и {abroad}')
     await state.finish()
